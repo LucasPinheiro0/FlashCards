@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import Flashcards from './Flashcards';
+import Dashboard from './pages/Dashboard';
 import './App.css'
 
 function App() {
@@ -15,13 +15,13 @@ function App() {
               <p>Aprenda idiomas de forma inteligente</p>
             </div>
             <div className="botoes">
-              <Link to="/flashcards">
+              <Link to="/Dashboard">
                 <button>
                   Flashcards
                   <p className='subtitulo'>Estude palavras e expressões em qualquer idioma</p>
                 </button>
               </Link>
-              <Link to="/literatura">
+              <Link to="/Dashboard">
               <button>
                 Literatura
                 <p className='subtitulo'>Aprenda vocabulário através de livros e HQs</p>
@@ -30,7 +30,7 @@ function App() {
             </div>
           </div>
         } />
-        <Route path="/flashcards" element={<Flashcards />} />
+        <Route path="/Dashboard" element={<Dashboard/>} />
       </Routes>
     </Router>
   );
